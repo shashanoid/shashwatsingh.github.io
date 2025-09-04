@@ -79,6 +79,69 @@
     span.highlight {
       background-color: #ffffd0;
     }
+
+    /* Projects container styling */
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .project-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #fafafa;
+      border-radius: 8px;
+      padding: 15px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      gap: 15px;
+    }
+
+    .project-row:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .project-image {
+      margin-bottom: 10px;
+    }
+
+    .project-content {
+      text-align: center;
+    }
+
+    .project-content h1 {
+      margin-bottom: 10px;
+      font-size: 24px !important;
+    }
+
+    .project-content p {
+      margin-bottom: 15px;
+      line-height: 1.4;
+      font-size: 13px;
+    }
+
+    /* Desktop: 2 columns */
+    @media (min-width: 768px) {
+      .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+
+      .project-row {
+        padding: 20px;
+      }
+
+      .project-content h1 {
+        font-size: 28px !important;
+      }
+
+      .project-content p {
+        font-size: 14px;
+      }
+    }
   </style>
   <link rel="icon" type="image/png" href="images/seal_icon.png">
   <title>Shashwat Singh</title>
@@ -109,7 +172,7 @@
                 <a href="http://www.linkedin.com/in/shashanoid"> LinkedIn </a>&nbsp/&nbsp
                 <a href="http://www.twitter.com/shashanoid"> Twitter </a>
               </p>
-              <p style="text-align: justify">Previously built marketplace integrations on social commerce platforms at Shopify and led engineering at Sharing Excess, fighting food insecurity through technology.</p>
+              <p style="text-align: justify">Built marketplace integrations on social commerce platforms at Shopify and led engineering at Sharing Excess, fighting food insecurity through technology.</p>
             </td>
             <td width="33%">
               <img width="285px" height="250px" style="border-radius: 200px;" src="images/shashwat-new.png">
@@ -125,272 +188,257 @@
           </tr>
         </table>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="40">
+        <div class="projects-container">
 
-          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
-            <td width="30%">
-              <div class="project-image">
-                <img height="220px" width="210px" src='images/communityninja.png'>
-                </div>
+          <div class="project-row" onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <div class="project-image">
+              <img height="220px" width="210px" src='images/juice.png'>
+            </div>
+            <div class="project-content">
+              <a href="#">
+                <h1 style="font-size: 32px; font-weight: 500;">apiJuice</h1>
+              </a>
+              <p>Turn websites into APIs. ApiJuice gets you structured data from anywhere on the web with speed.</p>
+              <a target="_blank" href="https://apijuice.com/">https://apiJuice.com/</a>
+              <br/><br/>
+              <a target="_blank" href="https://www.producthunt.com/products/apijuice/launches/apijuice">
+                <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1010146&theme=light&t=1756982862504" alt="Featured on Product Hunt" style="width: 250px; height: 54px;">
+              </a>
+            </div>
 
-              <script type="text/javascript">
-                function porlight_start() {
-                  document.getElementById('porlight_image').style.opacity = "1";
-                }
+            <script type="text/javascript">
+              function porlight_start() {
+                document.getElementById('porlight_image').style.opacity = "1";
+              }
 
-                function porlight_stop() {
-                  document.getElementById('porlight_image').style.opacity = "0";
-                }
-                porlight_stop()
-              </script>
-            </td>
-            <td valign="middle" width="75%">
+              function porlight_stop() {
+                document.getElementById('porlight_image').style.opacity = "0";
+              }
+              porlight_stop()
+            </script>
+          </div>
+
+          <div class="project-row" onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <div class="project-image">
+              <img height="220px" width="210px" src='images/communityninja.png'>
+            </div>
+            <div class="project-content">
               <a href="#">
                 <h1 style="font-size: 32px; font-weight: 500;">Community Ninja</h1>
               </a>
-              <br>
-              <p></p>
               <p>Discover, engage and grow with communities using AI. Easily discover top communities and groups across Facebook, X, and Reddit, and share your posts effortlessly.</p>
-              <a taget="_blank" href="https://communityninja.ai">https://communityninja.ai</a> <br/>
-            </td>
-          </tr>
+              <a target="_blank" href="https://communityninja.ai">https://communityninja.ai</a>
+            </div>
 
-          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
-            <td width="30%">
-              <div class="project-image">
-                <img height="220px" width="210px" src='images/courtship.png'>
-                </div>
+            <script type="text/javascript">
+              function porlight_start() {
+                document.getElementById('porlight_image').style.opacity = "1";
+              }
 
-              <script type="text/javascript">
-                function porlight_start() {
-                  document.getElementById('porlight_image').style.opacity = "1";
-                }
+              function porlight_stop() {
+                document.getElementById('porlight_image').style.opacity = "0";
+              }
+              porlight_stop()
+            </script>
+          </div>
 
-                function porlight_stop() {
-                  document.getElementById('porlight_image').style.opacity = "0";
-                }
-                porlight_stop()
-              </script>
-            </td>
-            <td valign="middle" width="75%">
+          <div class="project-row" onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <div class="project-image">
+              <img height="220px" width="210px" src='images/lotus.png'>
+            </div>
+            <div class="project-content">
+              <a href="#">
+                <h1 style="font-size: 32px; font-weight: 500;">JustEditPDF</h1>
+              </a>
+              <p>Edit PDF like a word doc. A simple and powerful tool that allows you to edit PDF files directly in your browser. Lossless editing and exporting.</p>
+              <a target="_blank" href="https://justeditpdf.com/">https://justeditpdf.com/</a>
+              <br/><br/>
+              <a target="_blank" href="https://www.producthunt.com/products/simpdf/launches/simpdf">
+                <img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=268334&theme=light&period=daily&t=1756984408961" alt="Top Post on Product Hunt" style="width: 250px; height: 54px;">
+              </a>
+            </div>
+
+            <script type="text/javascript">
+              function porlight_start() {
+                document.getElementById('porlight_image').style.opacity = "1";
+              }
+
+              function porlight_stop() {
+                document.getElementById('porlight_image').style.opacity = "0";
+              }
+              porlight_stop()
+            </script>
+          </div>
+
+          <div class="project-row" onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <div class="project-image">
+              <img height="220px" width="210px" src='images/courtship.png'>
+            </div>
+            <div class="project-content">
               <a href="#">
                 <h1 style="font-size: 32px; font-weight: 500;">CourtShip</h1>
               </a>
-              <br>
-              <p></p>
               <p>Your ultimate sports community platform - Connect with players, share moments, and play together</p>
-              <a taget="_blank" href="courtship.html">More Details</a> <br/> <br/>
-              <!-- download on the app store image button -->
-              <a taget="_blank" href="https://apps.apple.com/us/app/courtship/id6717695758?platform=iphone">
+              <a target="_blank" href="courtship.html">More Details</a>
+              <br/><br/>
+              <a target="_blank" href="https://apps.apple.com/us/app/courtship/id6717695758?platform=iphone">
                 <img src="images/appstore.png" alt="Download on the App Store" style="width: 150px; height: 50px;">
               </a>
-            </td>
-          </tr> 
+            </div>
 
-          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
-            <td width="30%">
-              <div class="project-image">
-                <img height="220px" width="210px" src='images/explainarxiv.png'>
-                </div>
+            <script type="text/javascript">
+              function porlight_start() {
+                document.getElementById('porlight_image').style.opacity = "1";
+              }
 
-              <script type="text/javascript">
-                function porlight_start() {
-                  document.getElementById('porlight_image').style.opacity = "1";
-                }
+              function porlight_stop() {
+                document.getElementById('porlight_image').style.opacity = "0";
+              }
+              porlight_stop()
+            </script>
+          </div> 
 
-                function porlight_stop() {
-                  document.getElementById('porlight_image').style.opacity = "0";
-                }
-                porlight_stop()
-              </script>
-            </td>
-            <td valign="middle" width="75%">
+          <div class="project-row" onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <div class="project-image">
+              <img height="220px" width="210px" src='images/explainarxiv.png'>
+            </div>
+            <div class="project-content">
               <a href="#">
                 <h1 style="font-size: 32px; font-weight: 500;">Explain ArXiv</h1>
               </a>
-              <br>
-              <p></p>
               <p>A tool to explain complex research papers using AI. Simply prepend "explain" to any arxiv paper link.</p>
-              <a taget="_blank" href="https://explainarxiv.org/">https://explainarxiv.org/</a> <br/><br/>
-              <a taget="_blank" href="explainarxiv.html">More Details</a> <br/>
-            </td>
-          </tr> 
+              <a target="_blank" href="https://explainarxiv.org/">https://explainarxiv.org/</a>
+              <br/><br/>
+              <a target="_blank" href="explainarxiv.html">More Details</a>
+            </div>
 
-          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
-            <td width="30%">
-              <div class="project-image">
-                <img height="220px" width="210px" src='images/freefood.png'>
-                </div>
+            <script type="text/javascript">
+              function porlight_start() {
+                document.getElementById('porlight_image').style.opacity = "1";
+              }
 
-              <script type="text/javascript">
-                function porlight_start() {
-                  document.getElementById('porlight_image').style.opacity = "1";
-                }
+              function porlight_stop() {
+                document.getElementById('porlight_image').style.opacity = "0";
+              }
+              porlight_stop()
+            </script>
+          </div> 
 
-                function porlight_stop() {
-                  document.getElementById('porlight_image').style.opacity = "0";
-                }
-                porlight_stop()
-              </script>
-            </td>
-            <td valign="middle" width="75%">
+          <div class="project-row" onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <div class="project-image">
+              <img height="220px" width="210px" src='images/freefood.png'>
+            </div>
+            <div class="project-content">
               <a href="#">
                 <h1 style="font-size: 32px; font-weight: 500;">Free Food App</h1>
               </a>
-              <br>
-              <p></p>
               <p>A non-profit app in partnership with <a href="https://sharingexcess.com/">Sharing Excess</a> providing free food (fruits, groceries, etc.) thus solving scarcity with excess. Launching August 2023.</p>
-              <a taget="_blank" href="./data/FreeFoodApp.pdf">Product Brief</a> <br/>
-            </td>
-          </tr> 
+              <a target="_blank" href="./data/FreeFoodApp.pdf">Product Brief</a>
+            </div>
 
-          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
-            <td width="30%">
-              <div class="project-image">
-                <img height="220px" width="210px" src='images/nfts.jpeg'>
-                </div>
+            <script type="text/javascript">
+              function porlight_start() {
+                document.getElementById('porlight_image').style.opacity = "1";
+              }
 
-              <script type="text/javascript">
-                function porlight_start() {
-                  document.getElementById('porlight_image').style.opacity = "1";
-                }
+              function porlight_stop() {
+                document.getElementById('porlight_image').style.opacity = "0";
+              }
+              porlight_stop()
+            </script>
+          </div> 
 
-                function porlight_stop() {
-                  document.getElementById('porlight_image').style.opacity = "0";
-                }
-                porlight_stop()
-              </script>
-            </td>
-            <td valign="middle" width="75%">
+          <div class="project-row" onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <div class="project-image">
+              <img height="220px" width="210px" src='images/nfts.jpeg'>
+            </div>
+            <div class="project-content">
               <a href="#">
                 <h1 style="font-size: 32px; font-weight: 500;">NFTs for Earth</h1>
               </a>
-              <br>
-              <p></p>
               <p>A platform aimed at accelerating funding for a more sustainable future through the NFTs.</p>
-              <a taget="_blank" href="https://www.nftsforearth.io/">https://www.nftsforearth.io/</a> <br/>
-              <a taget="_blank" href="https://www.instagram.com/nftsforearth/?hl=env">On Instagram</a> <br/>
-            </td>
-          </tr> 
+              <a target="_blank" href="https://www.nftsforearth.io/">https://www.nftsforearth.io/</a>
+              <br/>
+              <a target="_blank" href="https://www.instagram.com/nftsforearth/?hl=env">On Instagram</a>
+            </div>
+
+            <script type="text/javascript">
+              function porlight_start() {
+                document.getElementById('porlight_image').style.opacity = "1";
+              }
+
+              function porlight_stop() {
+                document.getElementById('porlight_image').style.opacity = "0";
+              }
+              porlight_stop()
+            </script>
+          </div> 
 
 
-          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
-            <td width="30%">
-              <div class="project-image">
-                <img height="220px" width="210px" src='images/lotus.png'>
-                </div>
 
-              <script type="text/javascript">
-                function porlight_start() {
-                  document.getElementById('porlight_image').style.opacity = "1";
-                }
-
-                function porlight_stop() {
-                  document.getElementById('porlight_image').style.opacity = "0";
-                }
-                porlight_stop()
-              </script>
-            </td>
-            <td valign="middle" width="75%">
-              <a href="#">
-                <h1 style="font-size: 32px; font-weight: 500;">Simpdf</h1>
-              </a>
-              <br>
-              <p></p>
-              <p>A tool to edit PDF files like a Word document, which became Product of the Day on Product Hunt.</p>
-              <a taget="_blank" href="https://www.producthunt.com/posts/simpdf">https://www.producthunt.com/posts/simpdf</a> <br/>
-              <a taget="_blank" href="https://github.com/shashanoid/Simpdf/">https://github.com/shashanoid/Simpdf</a> <br/>
-              <a taget="_blank" href="https://news.ycombinator.com/item?id=23366532">https://news.ycombinator.com/item?id=23366532</a> <br/>
-            </td>
-          </tr> 
-
-          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
-            <td width="30%">
-              <div class="project-image">
-                <img height="220px" width="120px" src='images/testflight.png'>
-              </div>
-              <script type="text/javascript">
-                function porlight_start() {
-                  document.getElementById('porlight_image').style.opacity = "1";
-                }
-
-                function porlight_stop() {
-                  document.getElementById('porlight_image').style.opacity = "0";
-                }
-                porlight_stop()
-              </script>
-            </td>
-            <td valign="middle" width="75%">
+          <div class="project-row" onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <div class="project-image">
+              <img height="220px" width="120px" src='images/testflight.png'>
+            </div>
+            <div class="project-content">
               <a href="#">
                 <h1 style="font-size: 32px; font-weight: 500;">TestFlight Store</h1>
               </a>
-              <br>
-              <p></p>
-              <p>An App Store for TestFlight apps where developers get feedback and testers earn money. </p>
-              <a taget="_blank" href="https://testflight.live/">https://testflight.live/</a> <br/>
-            </td>
-          </tr>
+              <p>An App Store for TestFlight apps where developers get feedback and testers earn money.</p>
+              <a target="_blank" href="https://testflight.live/">https://testflight.live/</a>
+            </div>
 
-          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
-            <td width="30%">
-              <div class="project-image">
-                <img height="220px" width="220px" src='images/qoues.png'>
-              </div>
-              <script type="text/javascript">
-                function porlight_start() {
-                  document.getElementById('porlight_image').style.opacity = "1";
-                }
+            <script type="text/javascript">
+              function porlight_start() {
+                document.getElementById('porlight_image').style.opacity = "1";
+              }
 
-                function porlight_stop() {
-                  document.getElementById('porlight_image').style.opacity = "0";
-                }
-                porlight_stop()
-              </script>
-            </td>
-            <td valign="middle" width="75%">
+              function porlight_stop() {
+                document.getElementById('porlight_image').style.opacity = "0";
+              }
+              porlight_stop()
+            </script>
+          </div>
+
+          <div class="project-row" onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <div class="project-image">
+              <img height="220px" width="220px" src='images/qoues.png'>
+            </div>
+            <div class="project-content">
               <a href="#">
                 <h1 style="font-size: 32px; font-weight: 500;">Qoeus</h1>
               </a>
-              <br>
-              <p> A tool for creating exams, quizzes, and homework more intelligently, used at the University of Pennsylvania. </p>
-              <a taget="_blank" href="https://qoeus.cis.upenn.edu/">https://qoeus.cis.upenn.edu/</a> <br/>
-            </td>
-          </tr>
-            <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
-                <td width="30%">
+              <p>A tool for creating exams, quizzes, and homework more intelligently, used at the University of Pennsylvania.</p>
+              <a target="_blank" href="https://qoeus.cis.upenn.edu/">https://qoeus.cis.upenn.edu/</a>
+            </div>
 
-                  <div class="project-image">
-                    <img height="220px" width="210px" src='images/apollos-playlist.jpg'>
-                  </div>
-                  <script type="text/javascript">
-                    function porlight_start() {
-                      document.getElementById('porlight_image').style.opacity = "1";
-                    }
-    
-                    function porlight_stop() {
-                      document.getElementById('porlight_image').style.opacity = "0";
-                    }
-                    porlight_stop()
-                  </script>
-                </td>
-                <td valign="middle" width="75%">
-                  <a href="#">
-                    <h1 style="font-size: 32px; font-weight: 500;">Apollo's Playlist</h1>
-                  </a>
-                  <br>
-                  <p></p>
-                  <p>An app to create personalized playlist for specific mood or events by leveraging Spotify API and song statistics.</p>
-                  <a taget="_blank" href="https://apollosplaylist.com/">https://apollosplaylist.com/</a> <br/>
-                  <a taget="_blank" href="https://playlistninja.app/">https://playlistninja.app/</a> <br/>
-                  <a taget="_blank" href="https://github.com/shashanoid/ApollosPlaylist">https://github.com/shashanoid/ApollosPlaylist</a>
-                </td>
-              </tr> 
+            <script type="text/javascript">
+              function porlight_start() {
+                document.getElementById('porlight_image').style.opacity = "1";
+              }
 
-                        <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
-            <td width="30%">
+              function porlight_stop() {
+                document.getElementById('porlight_image').style.opacity = "0";
+              }
+              porlight_stop()
+            </script>
+          </div>
+            <div class="project-row" onmouseout="porlight_stop()" onmouseover="porlight_start()">
               <div class="project-image">
-                <img height="220px" width="250px" src='images/blogletter-1.png'>
+                <img height="220px" width="210px" src='images/apollos-playlist.jpg'>
               </div>
+              <div class="project-content">
+                <a href="#">
+                  <h1 style="font-size: 32px; font-weight: 500;">Apollo's Playlist</h1>
+                </a>
+                <p>An app to create personalized playlist for specific mood or events by leveraging Spotify API and song statistics.</p>
+                <a target="_blank" href="https://apollosplaylist.com/">https://apollosplaylist.com/</a>
+                <br/>
+                <a target="_blank" href="https://playlistninja.app/">https://playlistninja.app/</a>
+                <br/>
+                <a target="_blank" href="https://github.com/shashanoid/ApollosPlaylist">https://github.com/shashanoid/ApollosPlaylist</a>
+              </div>
+
               <script type="text/javascript">
                 function porlight_start() {
                   document.getElementById('porlight_image').style.opacity = "1";
@@ -401,102 +449,104 @@
                 }
                 porlight_stop()
               </script>
-            </td>
-            <td valign="middle" width="75%">
+            </div> 
+
+          <div class="project-row" onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <div class="project-image">
+              <img height="220px" width="250px" src='images/blogletter-1.png'>
+            </div>
+            <div class="project-content">
               <a href="#">
                 <h1 style="font-size: 32px; font-weight: 500;">BlogLetter.Email</h1>
               </a>
-              <br>
-              <p></p>
               <p>A service that turns blog articles into newsletters and allows monetization through subscriptions.</p>
-              <a taget="_blank" href="https://blogletter.email/">https://blogletter.email/</a> <br/>
-            </td>
-          </tr>
+              <a target="_blank" href="https://blogletter.email/">https://blogletter.email/</a>
+            </div>
 
-          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
-            <td width="30%">
+            <script type="text/javascript">
+              function porlight_start() {
+                document.getElementById('porlight_image').style.opacity = "1";
+              }
 
-              <div class="project-image">
-                <img src='https://tweak-box.com/wp-content/uploads/2019/04/slick-tv-app-icon.png'>
+              function porlight_stop() {
+                document.getElementById('porlight_image').style.opacity = "0";
+              }
+              porlight_stop()
+            </script>
+          </div>
 
-                </div>
-              <script type="text/javascript">
-                function porlight_start() {
-                  document.getElementById('porlight_image').style.opacity = "1";
-                }
-
-                function porlight_stop() {
-                  document.getElementById('porlight_image').style.opacity = "0";
-                }
-                porlight_stop()
-              </script>
-            </td>
-            <td valign="middle" width="75%">
+          <div class="project-row" onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <div class="project-image">
+              <img src='https://tweak-box.com/wp-content/uploads/2019/04/slick-tv-app-icon.png'>
+            </div>
+            <div class="project-content">
               <a href="#">
                 <h1 style="font-size: 32px; font-weight: 500;">Slick TV</h1>
               </a>
-              <br>
-              <p></p>
-              <p>A streaming application for free-to-view channels with 60k daily users. Featured on <a target="_blank" href="https://www.redmondpie.com/download-slick-tv-ipa-apk-for-ios-11-android-for-live-tv/"> redmond pie.</a></p>
-            </td>
-          </tr> 
+              <p>A streaming application for free-to-view channels with 60k daily users. Featured on <a target="_blank" href="https://www.redmondpie.com/download-slick-tv-ipa-apk-for-ios-11-android-for-live-tv/">redmond pie.</a></p>
+            </div>
+
+            <script type="text/javascript">
+              function porlight_start() {
+                document.getElementById('porlight_image').style.opacity = "1";
+              }
+
+              function porlight_stop() {
+                document.getElementById('porlight_image').style.opacity = "0";
+              }
+              porlight_stop()
+            </script>
+          </div> 
 
 
-          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
-            <td width="30%">
-              <div class="project-image">
-                <img height="220px" width="210px"  style="border-radius: 2px" src='images/evict.png'>
-                </div>
-
-              <script type="text/javascript">
-                function porlight_start() {
-                  document.getElementById('porlight_image').style.opacity = "1";
-                }
-
-                function porlight_stop() {
-                  document.getElementById('porlight_image').style.opacity = "0";
-                }
-                porlight_stop()
-              </script>
-            </td>
-            <td valign="middle" width="75%">
+          <div class="project-row" onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <div class="project-image">
+              <img height="220px" width="210px" style="border-radius: 2px" src='images/evict.png'>
+            </div>
+            <div class="project-content">
               <a href="#">
                 <h1 style="font-size: 32px; font-weight: 500;">Evict Safe Philly</h1>
               </a>
-              <br>
-              <p></p>
-              <p>A tool providing underserved tenants with knowledge and aid during the eviction process, with plans to be run on public kiosks by legal firm Morgan Lewis. <br/><br/>
-              <a target="_blank" href="https://www.youtube.com/watch?v=aNQ2L3kxrvc">Presentation for Global Legal Hackathon</a></p>
-            </td>
-          </tr> 
+              <p>A tool providing underserved tenants with knowledge and aid during the eviction process, with plans to be run on public kiosks by legal firm Morgan Lewis.</p>
+              <a target="_blank" href="https://www.youtube.com/watch?v=aNQ2L3kxrvc">Presentation for Global Legal Hackathon</a>
+            </div>
 
-          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
-            <td width="30%">
-              <div class="project-image">
-                <img height="220px" width="210px"  style="border-radius: 2px" src='images/book.jpeg'>
-                </div>
-              <script type="text/javascript">
-                function porlight_start() {
-                  document.getElementById('porlight_image').style.opacity = "1";
-                }
+            <script type="text/javascript">
+              function porlight_start() {
+                document.getElementById('porlight_image').style.opacity = "1";
+              }
 
-                function porlight_stop() {
-                  document.getElementById('porlight_image').style.opacity = "0";
-                }
-                porlight_stop()
-              </script>
-            </td>
-            <td valign="middle" width="75%">
+              function porlight_stop() {
+                document.getElementById('porlight_image').style.opacity = "0";
+              }
+              porlight_stop()
+            </script>
+          </div> 
+
+          <div class="project-row" onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <div class="project-image">
+              <img height="220px" width="210px" style="border-radius: 2px" src='images/book.jpeg'>
+            </div>
+            <div class="project-content">
               <a href="#">
                 <h1 style="font-size: 32px; font-weight: 500;">Technology Picture Books: The Cloud</h1>
               </a>
-              <br>
-              <p></p>
-              <p>The Cloud is the first book in the "Technology Picture Book" series - a one of its kind experiment intended to explain technology to today's curious young minds. <br/><br/>
-              <a target="_blank" href="https://www.amazon.com/Cloud-Technology-Picture-Books-ebook/dp/B017FC8UF2"> Self published on amazon </a></p>
-            </td>
-          </tr>
-        </table>
+              <p>The Cloud is the first book in the "Technology Picture Book" series - a one of its kind experiment intended to explain technology to today's curious young minds.</p>
+              <a target="_blank" href="https://www.amazon.com/Cloud-Technology-Picture-Books-ebook/dp/B017FC8UF2">Self published on amazon</a>
+            </div>
+
+            <script type="text/javascript">
+              function porlight_start() {
+                document.getElementById('porlight_image').style.opacity = "1";
+              }
+
+              function porlight_stop() {
+                document.getElementById('porlight_image').style.opacity = "0";
+              }
+              porlight_stop()
+            </script>
+          </div>
+        </div>
 </body>
 
 </html>
